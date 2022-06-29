@@ -7,14 +7,21 @@ const Square = (props) => {
   return (
     <button
       className="square"
-      onClick={() => alert(`square ${props.value} clicked`)}
+      onClick={() => setValue('X')}
     >
-      {props.value}
+      {value}
     </button>
   );
 };
 
 const Board = () => {
+  const initialSquares = [
+    null, null, null,
+    null, null, null,
+    null, null, null,
+  ];
+  const [squares, setSquares] = useState(initialSquares);
+
   const renderSquare = (i) => {
     return <Square />;
   };
