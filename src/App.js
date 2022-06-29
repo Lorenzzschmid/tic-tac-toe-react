@@ -2,12 +2,8 @@ import './App.css';
 
 const Square = () => {
   return (
-    <div style={{
-      backgroundColor: 'gold',
-      margin: 10,
-      padding: 20, 
-    }}>
-      Square
+    <div className='square'>
+      X
     </div>
   )
 }
@@ -20,6 +16,12 @@ const Board = () => {
       padding: 20,
       }}>
       Board
+      <div className='board-row'>
+      <Square/><Square/><Square/>
+      </div>
+      <div className='board-row'>
+      <Square/><Square/><Square/>
+      </div>
       <div className='board-row'>
       <Square/><Square/><Square/>
       </div>

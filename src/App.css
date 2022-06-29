@@ -13,3 +13,13 @@ body {
   display: flex;
   flex-flow: row nowrap;
 }
+.square {
+  background-color: #444;
+  color: white;
+  border: 1px solid #999;
+  padding: 0;
+  font-size: 84px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+}
