@@ -10,9 +10,10 @@ const Square = (props) => {
 };
 
 const Board = () => {
-  const initialSquares = [null, null, null, null, null, null, null, null, null];
-  const [squares, setSquares] = useState(initialSquares);
-
+  // const initialSquares = [null, null, null, null, null, null, null, null, null];
+  const initialSquares = Array(9).fill(null); //EASIER APPROACH
+  
+  const [squares, setSquares] = useState(initialSquares); 
   const handleClickEvent = (i) => {
     // 1. Make a copy of the squares state array.
     const newSquares = [...squares];
