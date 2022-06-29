@@ -23,7 +23,7 @@ const Board = () => {
   const [squares, setSquares] = useState(initialSquares);
 
   const renderSquare = (i) => {
-    return <Square />;
+    return <Square value={squares[i]}/>;
   };
 
   return (
