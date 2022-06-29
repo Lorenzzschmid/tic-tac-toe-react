@@ -2,14 +2,12 @@ import React, {useState} from 'react';
 import "./App.css";
 
 const Square = (props) => {
-  const [value, setValue] = useState(null);
-
-  return (
+ return (
     <button
       className="square"
-      onClick={() => setValue('X')}
+      onClick={() => {}}
     >
-      {value}
+      {props.value}
     </button>
   );
 };
