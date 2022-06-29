@@ -26,16 +26,10 @@ const Board = () => {
       <Square value={squares[i]} onClickEvent={() => handleClickEvent(i)} />
     );
   };
-
+  const status = `Next player: ${xIsNext ? 'X' : 'O'}`; 
   return (
-    <div
-      style={{
-        backgroundColor: "skyblue",
-        margin: 10,
-        padding: 20,
-      }}
-    >
-      Board
+    <div>
+      <div className="status">{status}</div>
       <div className="board-row">
         {renderSquare(0)} {renderSquare(1)} {renderSquare(2)}
       </div>
@@ -52,10 +46,19 @@ const Board = () => {
 function App() {
   return (
     <div className="game">
-      Game
+      Tic-Tac-Toe
       <Board />
     </div>
   );
 }
+function calculateWinner(squares)
+const lines = [
+  [0, 1, 2],
+  [3, 4, 5], 
+  [6, 7, 8], //rows
+  
+]
+
+
 
 export default App;
