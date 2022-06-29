@@ -1,46 +1,47 @@
-import './App.css';
+import React, {useState} from 'react'; 
+import "./App.css";
 
 const Square = (props) => {
   return (
-    <button 
-    className='square'
-    onClick={() => alert(`square ${props.value} clicked`)}
+    <button
+      className="square"
+      onClick={() => alert(`square ${props.value} clicked`)}
     >
       {props.value}
     </button>
-  )
-}
- 
+  );
+};
+
 const Board = () => {
   const renderSquare = (i) => {
-    return (
-      <Square value={i} />
-    ); 
-  }; 
-  
+    return <Square />;
+  };
+
   return (
-    <div style={{
-      backgroundColor: 'skyblue',
-      margin: 10,
-      padding: 20,
-      }}>
+    <div
+      style={{
+        backgroundColor: "skyblue",
+        margin: 10,
+        padding: 20,
+      }}
+    >
       Board
-      <div className='board-row'>
-      {renderSquare(0)} {renderSquare(1)} {renderSquare(2)}
+      <div className="board-row">
+        {renderSquare(0)} {renderSquare(1)} {renderSquare(2)}
       </div>
-      <div className='board-row'>
-      {renderSquare(3)} {renderSquare(4)} {renderSquare(5)}
+      <div className="board-row">
+        {renderSquare(3)} {renderSquare(4)} {renderSquare(5)}
       </div>
-      <div className='board-row'>
-      {renderSquare(6)} {renderSquare(7)} {renderSquare(8)}
+      <div className="board-row">
+        {renderSquare(6)} {renderSquare(7)} {renderSquare(8)}
       </div>
     </div>
   );
-}; 
+};
 
 function App() {
   return (
-    <div className='game'>
+    <div className="game">
       Game
       <Board />
     </div>
