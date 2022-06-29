@@ -12,15 +12,13 @@ const Square = (props) => {
 const Board = () => {
   // const initialSquares = [null, null, null, null, null, null, null, null, null];
   const initialSquares = Array(9).fill(null); //EASIER APPROACH
-  
-  const [squares, setSquares] = useState(initialSquares); 
+  const [squares, setSquares] = useState(initialSquares);
+  const [xIsNext, setXIsNext] = useState(true);
   const handleClickEvent = (i) => {
-    // 1. Make a copy of the squares state array.
     const newSquares = [...squares];
-    // 2. Mutate the copy, setting the i-th element to 'X.
-    newSquares[i] = "X";
-    // 3. Call the setSquares function with the mutated copy.
+    newSquares[i] = xIsNext ? "X" : "O";
     setSquares(newSquares);
+    setXIsNext(!xIsNext);
   };
 
   const renderSquare = (i) => {
