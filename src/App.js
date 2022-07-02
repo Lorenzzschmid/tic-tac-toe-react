@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+//Styles for the App: 
 import "./App.css";
 
 const Square = (props) => {
